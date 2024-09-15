@@ -1,4 +1,4 @@
-package org.example.project.screen.home
+package org.example.project.screen.detail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,9 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
 
-
-class HomeScreen : Screen{
-
+class DetailScreen :Screen{
     @Composable
     override fun Content() {
         Box(
@@ -20,7 +18,7 @@ class HomeScreen : Screen{
             contentAlignment = Alignment.Center
         ){
             Column {
-                Text("Home screen")
+                Text("Detail screen")
 
                 Button(
                     onClick = {}
