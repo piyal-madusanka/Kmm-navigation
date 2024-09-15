@@ -37,11 +37,6 @@ fun App() {
             )
         }
 
-
-//        Navigator(HomeScreen()) { navigator: Navigator ->
-//
-////            SlideTransition(navigator)
-//        }
     }
 }
 
