@@ -9,12 +9,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.LocalNavigator
+import org.example.project.screen.detail.DetailScreen
 
 
 class HomeScreen : Screen{
 
     @Composable
     override fun Content() {
+        val navigator = LocalNavigator.current
         Box(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
@@ -23,7 +26,9 @@ class HomeScreen : Screen{
                 Text("Home screen")
 
                 Button(
-                    onClick = {}
+                    onClick = {
+                        navigator?.push(DetailScreen())
+                    }
                 ){
                     Text("Go")
                 }

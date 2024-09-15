@@ -9,10 +9,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.LocalNavigator
 
 class DetailScreen :Screen{
     @Composable
     override fun Content() {
+        val navigator = LocalNavigator.current
         Box(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
@@ -21,9 +23,11 @@ class DetailScreen :Screen{
                 Text("Detail screen")
 
                 Button(
-                    onClick = {}
+                    onClick = {
+                        navigator?.pop()
+                    }
                 ){
-                    Text("Go")
+                    Text("Go back")
                 }
             }
 
